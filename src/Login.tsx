@@ -1,21 +1,46 @@
-import { StatusBar, StyleSheet, Text, View } from "react-native";
-import { TEMAS } from "./estilos/temas";
+
+
+import { Image, VStack, Text, Box, FormControl, Input } from 'native-base';
+import Logo from './assets/Logo.png';
 
 export default function Login() {
     return (
-        <View style={styles.container}>
-            <StatusBar backgroundColor={TEMAS.colors.blue[800]} />
+        <VStack flex={1} alignItems="center" p={5}>
+            <Image source={Logo} alt="Logo Voll" />
+            <Text fontSize={"2xl"}
+                fontWeight={"bold"}
+                color="gray.500"
+                textAlign="center"
+                mt={5} >
+                Faça login em sua conta
+            </Text>
+            <Box>
+                <FormControl mt={3}>
+                    <FormControl.Label>Email</FormControl.Label>
+                    <Input
+                        placeholder='Insira seu endereço de email'
+                        size='lg'
+                        w="100%"
+                        borderRadius='lg'
+                        bgColor='gray.100'
+                        shadow={3}
+                    />
+                </FormControl>
+                <FormControl mt={3}>
+                    <FormControl.Label>Senha</FormControl.Label>
+                    <Input
+                        placeholder='Insira sua senha'
+                        size='lg'
+                        w="100%"
+                        borderRadius='lg'
+                        bgColor='gray.100'
+                        shadow={3}
+                    />
+                </FormControl>
+            </Box>
 
-            <Text>Tela LOGIN</Text>
-            <StatusBar />
-        </View>
+
+        </VStack>
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "#fff"
-    }
-
-
-})
