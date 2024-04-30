@@ -1,11 +1,12 @@
 
 
-import { Image, VStack, Text, Box, FormControl, Input } from 'native-base';
+import { Image, VStack, Text, Box, FormControl, Input, Button, Link } from 'native-base';
 import Logo from './assets/Logo.png';
+import { TouchableOpacity } from 'react-native';
 
 export default function Login() {
     return (
-        <VStack flex={1} alignItems="center" p={5}>
+        <VStack flex={1} alignItems="center" justifyContent="center" p={5}>
             <Image source={Logo} alt="Logo Voll" />
             <Text fontSize={"2xl"}
                 fontWeight={"bold"}
@@ -38,8 +39,25 @@ export default function Login() {
                     />
                 </FormControl>
             </Box>
-
-
+            <Button
+                w="100%"
+                bg="blue.100"
+                mt={10}
+                borderRadius="lg"
+            >
+                Entrar
+            </Button>
+            <Link href='https.:ww.alura.com.br'>
+                Esqueceu sua senha?
+            </Link>
+            <Box w="100%" flexDirection="row" justifyContent="center">
+                <Text>Ainda não tem cadastro? </Text>
+                <TouchableOpacity>
+                    <Text color="blue.500">
+                        Faça seu cadastro!
+                    </Text>
+                </TouchableOpacity>
+            </Box>
         </VStack>
     );
 }
