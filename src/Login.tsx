@@ -9,7 +9,9 @@ export default function Login() {
     return (
         <VStack flex={1} alignItems="center" justifyContent="center" p={5}>
             <Image source={Logo} alt="Logo Voll" />
-            {/* <Titulo /> */}
+            <Titulo color="blue.500">
+                Faça login em sua conta
+            </Titulo>
             <Box>
                 <FormControl mt={3}>
                     <FormControl.Label>Email</FormControl.Label>
